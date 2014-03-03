@@ -39,5 +39,9 @@ describe "Static pages" do
       visit '/static_pages/about'
       expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
     end
+    it "should have the content 'Multi view'" do
+      visit '/static_pages/about'
+      expect(page).to have_content("multi")
+    end
   end
 end
